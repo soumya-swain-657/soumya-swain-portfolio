@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Soumya Ranjan Swain — Full Stack Developer</title>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Mono:wght@300;400;500&family=Fraunces:ital,wght@0,300;0,600;0,900;1,300;1,600&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script defer src="script.js"></script>
+</head>
+
+<body>
+  <canvas id="canvas"></canvas>
+  <div id="cur"></div>
+  <div id="cur-ring"></div>
+
+  <!-- NAV -->
+  <nav id="nav">
+    <a href="#" class="nav-logo" style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">Soumya</a>
+    <ul class="nav-links">
+      <li><a href="#about">About</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#education">Education</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <button onclick="openModal()" class="nav-cta"><span>Hire Me</span></button>
+  </nav>
+
+
+  <div class="modal-overlay" id="modal" onclick="closeOnOverlay(event)">
+    <div class="modal-box">
+      <button class="modal-close" onclick="closeModal()">✕</button>
+      <div class="modal-eyebrow">Let's Connect</div>
+      <h2 class="modal-title">Hire <em>Soumya</em></h2>
+      <p class="modal-sub">Open to full-stack roles, freelance projects, and collaborations. Reach out directly or drop
+        a message below!</p>
+      <div class="modal-contacts">
+        <a href="mailto:swainsoumya7750@gmail.com" class="modal-contact-link">
+          <div class="mc-icon">✉</div>
+          <div class="mc-info">
+            <div class="mc-lbl">Email</div>
+            <div class="mc-val">swainsoumya7750@gmail.com</div>
+          </div>
+          <div class="mc-arr">→</div>
+        </a>
+        <a href="https://wa.me/918018105521" target="_blank" class="modal-contact-link">
+          <div class="mc-icon">📱</div>
+          <div class="mc-info">
+            <div class="mc-lbl">WhatsApp</div>
+            <div class="mc-val">+91 80181 05521</div>
+          </div>
+          <div class="mc-arr">→</div>
+        </a>
+      </div>
+      <div class="modal-divider"><span>or send a message</span></div>
+      <div class="modal-form">
+        <input class="modal-input" type="text" id="m-name" placeholder="Your Name" />
+        <input class="modal-input" type="email" id="m-email" placeholder="Your Email" />
+        <textarea class="modal-textarea" id="m-msg" placeholder="Your message..."></textarea>
+        <button class="modal-send" onclick="sendMsg()"><span>Send Message →</span></button>
+        <div class="modal-success" id="m-success">✔ Message sent! I'll get back to you soon.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- HERO -->
+  <section class="hero" id="home">
+    <div class="hero-inner">
+      <div class="hero-left">
+        <div class="hero-eyebrow">Available for Work</div>
+        <h1 class="hero-name">
+          Soumya Ranjan<br>
+          <em>Swain.</em>
+        </h1>
+        <p class="hero-tagline">
+          <strong>Full-Stack Developer</strong> — building end-to-end digital experiences with Python & modern web
+          technologies. Passionate about clean code, scalable systems, and real-world impact.
+        </p>
+        <div class="hero-actions">
+          <a href="#projects" class="btn-gold"><span>View Projects</span> <span>→</span></a>
+          <a href="https://github.com/soumya-swain-657" target="_blank" class="btn-ghost">GitHub ↗</a>
+          <a href="https://www.linkedin.com/in/soumya-ranjan-swain-1ab226263/" target="_blank"
+            class="btn-ghost">LinkedIn ↗</a>
+        </div>
+      </div>
+      <div class="hero-right">
+        <div class="hero-card">
+          <div class="hero-card-title">
+            <span class="status-dot"></span>Open to Opportunities
+          </div>
+          <div class="skill-orbit">
+            <span class="orbit-chip lit">Python</span>
+            <span class="orbit-chip lit">JavaScript</span>
+            <span class="orbit-chip">HTML5</span>
+            <span class="orbit-chip">CSS3</span>
+            <span class="orbit-chip">SQL</span>
+            <span class="orbit-chip">REST APIs</span>
+            <span class="orbit-chip">Git</span>
+            <span class="orbit-chip">GitHub</span>
+          </div>
+          <div class="hero-stats-row">
+            <div class="hstat">
+              <div class="hstat-n">2+</div>
+              <div class="hstat-l">Projects</div>
+            </div>
+            <div class="hstat">
+              <div class="hstat-n">4</div>
+              <div class="hstat-l">Years Study</div>
+            </div>
+            <div class="hstat">
+              <div class="hstat-n">2+</div>
+              <div class="hstat-l">Languages</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="scroll-hint">
+      <span>Scroll</span>
+      <div class="scroll-line"></div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about">
+    <div class="reveal">
+      <div class="sec-label">About Me</div>
+      <h2 class="sec-title">Passionate Dev, <em>Problem Solver.</em></h2>
+      <div class="sec-rule"></div>
+    </div>
+    <div class="about-wrap">
+      <div class="about-vis reveal">
+        <div class="about-frame">
+          <div class="about-corner ac-tl"></div>
+          <div class="about-corner ac-br"></div>
+          <div class="avatar-bg">
+            <div class="avatar-inner">Soumya</div>
+          </div>
+          <div class="about-badge">Full Stack Dev</div>
+        </div>
+      </div>
+      <div class="about-text reveal">
+        <p>I'm a <strong>Full-Stack Developer</strong> with hands-on experience in building real-world applications from
+          scratch. My journey in Python , with strong skills in backend architecture and
+          database design.</p>
+        <p>In Python, I've worked deeply with <strong>OOP, Inheritance, Polymerphism, Abstraction,
+            Encapusulation</strong> and backend fundamentals. I bring experience in <strong>application development,
+            scripting, and problem-solving</strong>. I
+          also build full-stack web apps using <strong>React.js, and REST APIs</strong>.</p>
+        <p>I believe great software is built on <strong>clean logic, solid architecture</strong>, and an obsessive
+          attention to reliability. My goal is to contribute to real-world teams and deliver elegant, scalable
+          solutions.</p>
+        <div class="about-badges">
+          <span class="a-badge">Clean Code</span>
+          <span class="a-badge">Fast Learner</span>
+          <span class="a-badge">Team Player</span>
+          <span class="a-badge">Self-Starter</span>
+          <span class="a-badge">Problem Solver</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SKILLS -->
+  <section id="skills">
+    <div class="reveal">
+      <div class="sec-label">Expertise</div>
+      <h2 class="sec-title">Skills & <em>Technologies</em></h2>
+      <div class="sec-rule"></div>
+    </div>
+    <div class="skills-wrap">
+      <div class="sk-card reveal">
+        <span class="sk-icon">&lt;/&gt;</span>
+        <div class="sk-name">Languages</div>
+        <div class="sk-items">Python<br>JavaScript</div>
+        <div class="sk-bar">
+          <div class="sk-fill" data-w="85"></div>
+        </div>
+      </div>
+      <div class="sk-card reveal">
+        <span class="sk-icon">◈</span>
+        <div class="sk-name">Frontend</div>
+        <div class="sk-items">HTML5<br>CSS3<br>JavaScript</div>
+        <div class="sk-bar">
+          <div class="sk-fill" data-w="78"></div>
+        </div>
+      </div>
+      <div class="sk-card reveal">
+        <span class="sk-icon">▲</span>
+        <div class="sk-name">Backend</div>
+        <div class="sk-items">React.js</div>
+        <div class="sk-bar">
+          <div class="sk-fill" data-w="80"></div>
+        </div>
+      </div>
+      <div class="sk-card reveal">
+        <span class="sk-icon">■</span>
+        <div class="sk-name">Database</div>
+        <div class="sk-items">SQL<br>MySQL</div>
+        <div class="sk-bar">
+          <div class="sk-fill" data-w="75"></div>
+        </div>
+      </div>
+      <div class="sk-card reveal">
+        <span class="sk-icon">◆</span>
+        <div class="sk-name">Tools</div>
+        <div class="sk-items">Git & GitHub<br>VS Code<br>Android Studio</div>
+        <div class="sk-bar">
+          <div class="sk-fill" data-w="88"></div>
+        </div>
+      </div>
+    </div>
+    <div class="soft-row reveal">
+      <span class="soft-pill">Problem Solving</span>
+      <span class="soft-pill">Communication</span>
+      <span class="soft-pill">Teamwork</span>
+      <span class="soft-pill">Strategic Thinking</span>
+      <span class="soft-pill">Quick Learner</span>
+      <span class="soft-pill">Attention to Detail</span>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section id="projects">
+    <div class="reveal">
+      <div class="sec-label">My Work</div>
+      <h2 class="sec-title">Featured <em>Projects</em></h2>
+      <div class="sec-rule"></div>
+    </div>
+    <div class="proj-grid">
+
+      <!-- Chess Game -->
+      <div class="proj-card reveal">
+        <div class="proj-num">01</div>
+        <div class="proj-tag">Python </div>
+        <h3 class="proj-title">Vehicle number plate detection and recognition</h3>
+        <p class="proj-desc">Developed a Vehicle Number Plate Detection and Recognition system using Python, OpenCV, and
+          Tesseract OCR to automatically detect vehicle number plates and extract text from images. Implemented image
+          processing techniques such as grayscale conversion, edge detection, contour detection, and thresholding to
+          improve detection accuracy under different lighting conditions and angles. The project focused on real-time
+          image processing, character recognition, and automated data extraction using computer vision techniques..</p>
+        <div class="proj-tech">
+          <span class="tech-tag">Python</span>
+          <span class="tech-tag">OpenCV</span>
+        </div>
+      </div>
+
+      <!-- Restaurant Management -->
+      <div class="proj-card reveal">
+        <div class="proj-num">02</div>
+        <div class="proj-tag">Full Stack · Web App</div>
+        <h3 class="proj-title">Restaurant Management System</h3>
+        <p class="proj-desc">A full-stack web app using Node.js, Express, and SQLite for digital order and menu
+          management. Includes REST APIs and authentication for secure, efficient data handling.</p>
+        <div class="proj-tech">
+          <span class="tech-tag">Node.js</span>
+          <span class="tech-tag">Express</span>
+          <span class="tech-tag">SQLite</span>
+          <span class="tech-tag">REST API</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- EDUCATION -->
+  <section id="education">
+    <div class="reveal">
+      <div class="sec-label">Academic Background</div>
+      <h2 class="sec-title">My <em>Education</em></h2>
+      <div class="sec-rule"></div>
+    </div>
+    <div class="timeline">
+      <div class="tl-item">
+        <div class="tl-dot"></div>
+        <div class="tl-year">2021 — 2025</div>
+        <div class="tl-degree">B.Tech — Computer Science & Engineering</div>
+        <div class="tl-school">Konark Institute of Science and Technology (BPUT)</div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-dot"></div>
+        <div class="tl-year">2021</div>
+        <div class="tl-degree">12th Grade — Science Stream</div>
+        <div class="tl-school">Ratanpur H.S School</div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-dot"></div>
+        <div class="tl-year">2019</div>
+        <div class="tl-degree">10th Standard</div>
+        <div class="tl-school">Saraswati sishu vidya mandir,Nimapara</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact">
+    <div class="contact-wrap">
+      <div class="contact-text reveal">
+        <div class="sec-label">Get In Touch</div>
+        <h2 class="sec-title">Let's Build <em>Something Great.</em></h2>
+        <div class="sec-rule"></div>
+        <p class="contact-sub">I'm a motivated CS graduate eager to start my professional journey. Open to entry-level
+          full-stack roles where I can apply my skills, collaborate with experienced teams, and deliver real value.</p>
+      </div>
+      <div class="contact-cards reveal">
+        <a href="mailto:swainsoumya7750@gmail.com" class="c-card">
+          <div class="c-icon">✉</div>
+          <div class="c-info">
+            <div class="c-lbl">Email</div>
+            <div class="c-val">swainsoumya7750@gmail.com</div>
+          </div>
+          <div class="c-arr">→</div>
+        </a>
+        <a href="https://www.linkedin.com/in/soumya-ranjan-swain-1ab226263/" target="_blank" class="c-card">
+          <div class="c-icon">👔</div>
+          <div class="c-info">
+            <div class="c-lbl">LinkedIn</div>
+            <div class="c-val">soumya-ranjan-swain-1ab226263/</div>
+          </div>
+          <div class="c-arr">→</div>
+        </a>
+        <a href="https://github.com/soumya-swain-657" target="_blank" class="c-card">
+          <div class="c-icon">⌥</div>
+          <div class="c-info">
+            <div class="c-lbl">GitHub</div>
+            <div class="c-val">github.com/soumya-swain-657</div>
+          </div>
+          <div class="c-arr">→</div>
+        </a>
+        <a href="https://wa.me/918018105521" target="_blank" class="c-card">
+          <div class="c-icon">📱</div>
+          <div class="c-info">
+            <div class="c-lbl">WhatsApp</div>
+            <div class="c-val">+91 80181 05521</div>
+          </div>
+          <div class="c-arr">→</div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <span class="f-logo">Soumya Ranjan Swain</span>
+    <span class="f-copy">© 2025 — Full Stack Developer</span>
+  </footer>
+
+</body>
+
+</html>
